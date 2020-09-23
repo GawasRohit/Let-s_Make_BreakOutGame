@@ -1,13 +1,14 @@
 /*
  * ScreenBuffer.cpp
  *
- *  Created on: Jan. 9, 2019
- *      Author: serge
+ *  Created on: 23-Sep-2020
+ *      Author: rogawas
  */
 
 
+
 #include "ScreenBuffer.h"
-#include <SDL2/SDL.h>
+#include <SDL.h>
 #include <cassert>
 
 ScreenBuffer::ScreenBuffer(): mSurface(nullptr)
@@ -80,7 +81,7 @@ void ScreenBuffer::SetPixel(const Color& color, int x, int y)
 			uint32_t * pixels = (uint32_t*)mSurface->pixels;
 
 			size_t index = GetIndex(y, x);
-        
+
             pixels[index] = color.GetPixelColor();
 
 			SDL_UnlockSurface(mSurface);
@@ -96,4 +97,5 @@ uint32_t ScreenBuffer::GetIndex(int r, int c)
 	}
 	return 0;
 }
+
 

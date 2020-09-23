@@ -1,12 +1,13 @@
 /*
  * ScreenBuffer.h
  *
- *  Created on: Jan. 9, 2019
- *      Author: serge
+ *  Created on: 23-Sep-2020
+ *      Author: rogawas
  */
 
 #ifndef GRAPHICS_SCREENBUFFER_H_
 #define GRAPHICS_SCREENBUFFER_H_
+
 
 #include <stdint.h>
 
@@ -36,6 +37,7 @@ private:
 	SDL_Surface * mSurface;
 	uint32_t GetIndex(int r, int c);
 };
+
 
 
 
